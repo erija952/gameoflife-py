@@ -11,9 +11,7 @@ class gameoflife(object):
     
     def run(self):
         golb = gameoflifeboard.gameoflifeboard()
-        golb.createBoard(10, 10)
-        golb.populate()
-        board = golb.board
+        board = golb.populateRandomly(10, 10, 0.5)
         myinput = ''
         while myinput != 'c':
             board = self.update_board(board)
