@@ -27,4 +27,4 @@ class gameoflifeboard(object):
             
             if self.board[x][y] != '1':
                 self.board[x][y] = '1'
-                num_ones_set += 1           
+                num_ones_set += 1

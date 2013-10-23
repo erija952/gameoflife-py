@@ -14,7 +14,6 @@ class gameoflife(object):
         golb.createBoard(10, 10)
         golb.populate()
         board = golb.board
-        print board
         myinput = ''
         while myinput != 'c':
             board = self.update_board(board)

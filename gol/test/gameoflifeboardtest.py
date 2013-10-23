@@ -29,7 +29,6 @@ class Test(unittest.TestCase):
         self.gol.populate()    
         nr_of_ones_at_board = 0
         for i in self.gol.board: nr_of_ones_at_board += i.count('1')
-        print "Nr of ones is " + str(nr_of_ones_at_board) 
         self.assertEqual(nr_of_ones_at_board, int(10*10*0.5), "Correct number of elements should be set to one")
         
     def testPopulateShouldHandleIncorrectRatio(self):        

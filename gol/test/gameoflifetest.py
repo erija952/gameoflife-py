@@ -14,11 +14,6 @@ class Test(unittest.TestCase):
         pass
     
     def boardtest(self, expected_board, new_board):
-        print "Exp"
-        print expected_board
-        print "New"
-        print new_board
-        
         (exp_rows,exp_cols) = np.shape(new_board)
         (rows,cols) = np.shape(new_board)
         assert (exp_rows == rows)
@@ -28,9 +23,9 @@ class Test(unittest.TestCase):
             for y in range(0,cols):
                 self.assertEqual(new_board[y][x], expected_board[y][x], "Board not updated correctly at (" + str(x) + "," + str(y)+")." )
          
-    def testRun(self):
-        gol = gameoflife()
-        gol.run()
+#     def testRun(self):
+#         gol = gameoflife()
+#         gol.run()
 
     def testcountneighbours(self):
         self.assertEqual(self.gol.count_neighbours(0,0,self.board), 2, "Should give correct number of neighbours")
