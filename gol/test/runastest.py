@@ -5,8 +5,8 @@ from gol.gameoflife import gameoflife
 class Test(unittest.TestCase):
 
     def testRun(self):
-        gol = gameoflife()
-        gol.main('fromfile', '/home/eral/workspace/gameoflife-py/gol/test/glider.txt')
+#         gol = gameoflife()
+#         gol.main('fromfile', '/home/eral/workspace/gameoflife-py/gol/test/glider.txt')
         pass
 
 
