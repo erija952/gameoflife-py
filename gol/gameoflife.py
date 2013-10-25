@@ -62,8 +62,6 @@ class gameoflife(object):
             for xi in range(-1,2):
                 curx=x+xi
                 cury=y+yi
-#                 print "(cury,curx)=("+str(cury)+","+str(curx)+")"
-                
                 if not(xi == 0 and yi == 0): #Don't count current coordinate
                     if curx >= 0 and curx < max_cols:
                         if cury >= 0 and cury < max_rows:
@@ -109,13 +107,11 @@ if __name__ == '__main__':
     parser.add_argument("--input", type=str, help="location of txt file with map")
     args = parser.parse_args()
     if args.input:
-        print "input turned on"
         inputfile= args.input
         boardtype='fromfile'
     else:
         inputfile = ''
         boardtype='random'
-    print inputfile
     gol = gameoflife()
     gol.main(boardtype, inputfile)
     

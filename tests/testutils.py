@@ -8,5 +8,4 @@ def boardtest(expected_board, new_board):
     
     for y in range(0,rows):
         for x in range(0,cols):
-            print "(y,x)=("+str(y)+","+str(x)+")"            
             assert new_board[y][x] == expected_board[y][x]

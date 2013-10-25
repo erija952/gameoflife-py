@@ -1,5 +1,5 @@
 import unittest
-from gol.gameoflife import gameoflife
+# from gol.gameoflife import gameoflife
 
 
 class Test(unittest.TestCase):
