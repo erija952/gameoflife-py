@@ -2,6 +2,7 @@ import unittest
 from gol.gameoflife import gameoflife
 from testutils import boardtest
 from mock import MagicMock
+from os import path
 
 class Test(unittest.TestCase):
  
@@ -9,8 +10,7 @@ class Test(unittest.TestCase):
         self.gol = gameoflife()
         self.board =         [['1', '0', '0','1'], ['1', '1', '0','0'], ['1', '0', '0','0'],['0', '0', '1','1']]
         self.expected_board= [['1', '1', '0','0'], ['1', '1', '0','0'], ['1', '0', '1','0'],['0', '0', '0','0']]
-        self.correctlocationfrommaponfile = '/home/eral/workspace/gameoflife-py/tests/miniboard.txt'
-        pass
+        self.correctlocationfrommaponfile = path.dirname(__file__) +'/miniboard.txt'
 
     def tearDown(self):
         pass

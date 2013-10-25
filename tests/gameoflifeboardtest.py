@@ -1,6 +1,7 @@
 import unittest
 from gol.gameoflifeboard import gameoflifeboard
 from testutils import boardtest
+from os import path
         
 class Test(unittest.TestCase):
  
@@ -24,12 +25,12 @@ class Test(unittest.TestCase):
         pass
     
     def testLoadFromFile(self):
-        board = self.gol.populateFromFile("/home/eral/workspace/gameoflife-py/tests/miniboard.txt")
+        board = self.gol.populateFromFile(path.dirname(__file__) +'/miniboard.txt')
         expectedBoard = [['0', '1', '1','0','0'], ['0', '1', '1','0','0'], ['0', '0', '0','0','1'],['0', '0', '0','1','0'],['0', '1', '1','0','0']]
         boardtest(board, expectedBoard)   
         
     def testLoadNonSquareMapFromFile(self):
-        board = self.gol.populateFromFile("/home/eral/workspace/gameoflife-py/tests/mini-non-square.txt")
+        board = self.gol.populateFromFile(path.dirname(__file__) +'/mini-non-square.txt')
         expectedBoard = [['0', '1', '1','0','0'], ['0', '1', '1','0','0'], ['0', '0', '0','0','1'],['0', '0', '0','1','0'],['0', '1', '1','0','0'],['0', '0', '0','0','0']]
         boardtest(board, expectedBoard)           
         
