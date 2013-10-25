@@ -13,7 +13,7 @@ class gameoflife(object):
     def __init__(self):
         self.boardtype = 'random'
         self.filename = '' 
-        self.board = []    
+        self.board = []
 
     def verify_input(self, boardtype, inputfile):
         if boardtype == 'fromfile':

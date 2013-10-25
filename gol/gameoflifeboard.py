@@ -1,7 +1,5 @@
 #!/usr/bin/python
 from random import randrange
-import numpy as np
-import re
 
 class gameoflifeboard(object):
 
